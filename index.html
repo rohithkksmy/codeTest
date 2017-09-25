@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Insurance Comparator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+<body ng-app="myApp">
+  <header class = "main-header">
+        <div class = "sub-header"><h2 Class = "header-padding">Insurance Comparator</h2></div>
+        <div class= "sub-header-nav">
+          <nav id=Nav>
+              <a href="#">Home</a> |
+              <a href="#">About</a> |
+              <a href="#">Contact</a> |
+              <a href="#">Help</a>
+          </nav>
+        </div>
+  </header>
+  <article class = "main-article" ng-controller="compareController">
+    <div class = "main-article-header">
+        <h1 class = "main-article-header-tag">Compare The Insurance Plans For Free</h2>
+          <div class = "tile-tabs-intro">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+          </div>
+          <div class = "tile-tabs-feautres">
+              <div>Features provided</div>
+              <div class = "tile-tabs-features">
+                <div class="row tile-tabs-filter">
+                  <div class = "col-md-5">1.Select any 2 plans and click here two compare:</div>
+                  <div class = "col-md-4"><button class="btn btn-primary" ng-click = "compareValues()">Compare</button></div>
+                </div>   
+                <div class="row tile-tabs-filter">
+                    <div class = "col-md-5">2.Select the Filters according to the Plan:</div>
+                    <div class = "col-md-2">
+                        <select 
+                          class= "tile-tabs-filter-dd"
+                          ng-init="item = DDArr[0]" 
+                          ng-options="item.name for item in DDArr"                                             
+                          ng-model="item"
+                          ng-change="selectFilter(item)"
+                         ><option value = "select">Select</option></select>
+                    </div>
+                </div>    
+              </div>
+          </div>
+          <div class = "tile-tabs-container">
+              <div ng-repeat = "object in tileTabsData" class ="tile-tabs">
+                  <div class= "tile-tabs-header">
+                    <input class = "big-checkbox" type="checkbox" ng-model='selected[object.premium]'>
+                    {{object.provider['en-ae'].product_name}}
+                  </div>
+                  <div>
+                    <img width="100%" height="20%" src = "http://lorempixel.com/400/200/sports/1/Dummy-Text/">
+                  </div>
+                  <div class = "tile-tabs-plan-header">About Scheme</div>
+                  <div class = "tile-tabs-plan-desc">
+                      {{object.provider['en-ae'].description}}
+                  </div>
+                  <div>
+                    <strong>T&C:</strong>
+                     <span class = "tile-tabs-TC"><a target = "_blank" ng-href = "{{object.provider['en-ae'].terms_conditions_url}}">{{object.provider['en-ae'].terms_conditions_url}}</a></span>
+                  </div>
+      
+              </div>
+          </div>
+        
+    </div>
+  </article>
+  <footer class="main-footer">
+    <div class= "main-footer-container">
+        CopyRights of this website belongs To ICT 
+    </div> 
+  </footer>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+<script src="https://rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-0.11.0.min.js"></script>
+<script src="https://rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-0.11.0.min.js"></script>
+<script src = "index.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+html, body { 
+    height: 100%; 
+    width: 100%; 
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    background-image: url("https://pixabay.com/photo-419058/");
+}
+
+.main-header{
+    height:10%;
+    width:100%;
+    display:block;
+    color:white;
+    background-color: black;
+}
+.sub-header{
+    display:block;
+    float:left;
+    width: 40%;
+    margin-left:2%;
+}
+.sub-header-nav{
+    width: 30%;
+    float: right;
+    display: block;
+    text-align: right;
+    margin-top: 26px;
+    margin-right: 35px;
+    font-size: 20px;
+}
+
+#Nav a{
+    color: #f2f2f2;
+    text-decoration:none;
+}
+
+#Nav a:hover {
+   color: blue;
+   text-decoration: underline;
+}
+
+.main-footer {
+    height:6%;
+    width:100%;
+    color:white;
+    display: block;
+    background-color: black;
+}
+
+.main-footer-container{
+   margin:0 auto;
+   padding-top:1%;
+   width: 50%;
+   text-align: center; 
+}
+
+.main-article{
+    height: 84%;
+    color:black;
+    overflow: auto;
+    margin-left:6%
+}
+
+.main-article .main-article-header{
+    height:auto;
+}
+
+.main-article-header{
+    display: block;
+    margin-left: 2%
+}
+
+.tile-tabs{
+    width: 25%;
+    float: left;
+    border: 1px solid gray;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 2%;
+}
+
+.tile-tabs-header{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tile-tabs-TC{
+    text-decoration: underline;
+    color: gray;
+    cursor: pointer;
+}
+
+.tile-tabs-plan-header{
+    font-size:20px;
+    margin-top: 1%
+}
+
+.tile-tabs-plan-desc{
+        padding: 5%;
+        color: gray
+}
+
+.tile-tabs-intro{
+    width: 75%;
+    float: left;
+    margin-left: 7%;
+    font-size: 20px;
+    color: gray;
+    margin-top: 1%;
+    text-align: justify;
+    text-indent: 20%
+}
+
+.tile-tabs-feautres{
+    width: 75%;
+    float: left;
+    margin-left: 7%;
+    font-size: 20px;
+    color: gray;
+    margin-top: 1%;
+}
+
+.tile-tabs-features{
+    font-size: 16px;
+    margin-left: 4%;
+}
+
+.big-checkbox {width: 20px; height: 20px;}
+
+.tile-tabs-filter {
+    margin:1%;
+}
+
+.tile-tabs-filter-dd{
+    width:99%;
+}
+
+.tile-compare-tab{
+    border-bottom: 1px solid #c0c0c0;
+    margin: 2% 7% 2% 10%;
+    padding: 4%;
+    height: 90px;
+}
+
+.compare-key{
+    font-weight:bold;
+}
+
+.compare-value{
+    color: gray;
+}
+
+.compare-plan-name{
+    font-weight: bold;
+
+}
+
+.compare-plan-desc{
+    margin-left: 10%;
+}
+
+.main-article-header-tag{
+    margin-left: 7%;
+}
+
+.tile-tabs-container{
+    margin-left:6%;
+}

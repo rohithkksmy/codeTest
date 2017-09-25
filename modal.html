@@ -1,0 +1,27 @@
+<div class="modal-header">
+        <h3 class="modal-title">Compare Plans</h3>
+    </div>
+    <div class="modal-body">
+        <div class = "row compare-container">
+            <div ng-repeat =  "item in resultArr" class = "col-md-6">
+                <div>
+                    <div ng-repeat="object in item.covers" class = "tile-compare-tab">
+                        <div ng-repeat="(key,value) in object">
+                            <div ng-if = "checkVal(value)" >
+                                <div class = "compare-plan-name" ng-if = "key == 'name'">
+                                    {{value}}
+                                </div>
+                                <div class = "compare-plan-desc" ng-if = "key != 'name'">
+                                        <span class = "compare-key">{{key}}: </span>
+                                        <span class = "compare-value">{{value}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+    </div>
